@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <h1>Please update the information!</h1>
+</div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="well">
+        <h2>Title: {{entry.game}}</h2>
+        <h2>Genre: {{entry.genre}}</h2>
+        <br>
+      </div>
+      <div class="well">
+        <form action="/{{entry._id}}" class="input-group row" method="post">
+          <input type="text" name="entry" class="form-control form-control-lg" value="{{entry.game}}">
+          <input type="text" name="genre" class="form-control form-control-lg" value="{{entry.genre}}">
+          <button type="submit" class="col-md-12 btn btn-primary" type="button">Update Game</button>
+        </form>
+      </div>
+    </div>
+  </div>
