@@ -4,7 +4,8 @@
   "description": "Collection manager made with node, mongoDB and Mongoose",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node ."
   },
   "author": "natural",
   "license": "ISC",

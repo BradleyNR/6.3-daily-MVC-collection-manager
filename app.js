@@ -6,8 +6,10 @@ const mongoose = require('mongoose');
 const router = require('./routes');
 
 const app = express();
+//heroku database setup
+let database = process.env.MONGODB_URI || 'mongodb://localhost/test';
+mongoose.connect(database);
 
-mongoose.connect('mongodb://localhost/test');
 //view
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
