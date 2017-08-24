@@ -19,9 +19,7 @@ let MainController = {
       Entry.findByIdAndUpdate(entryId, {$set: {game: req.body.entry, genre: req.body.genre}}).then(function(){
         console.log('working');
         res.redirect('/');
-      }).catch(function(err){
-        console.log(err);
-      });
+      })
     } else {
       let newGame = new Entry({game: game, genre: genre});
       newGame.save(function(){
