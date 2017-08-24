@@ -19,4 +19,5 @@ app.use(bodyParser.urlencoded({ extended: false}));
 //passing app into router
 router(app);
 
-app.listen(3000);
+//heroku port
+app.listen(process.env.PORT || 3000);
