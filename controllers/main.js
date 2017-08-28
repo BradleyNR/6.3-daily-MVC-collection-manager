@@ -15,6 +15,8 @@ let MainController = {
     console.log(entryId);
     //check to see if there is an entry Id
     //if there is, redirect and update database, if not just redirect to add from mainpage
+
+    //SET THE
     if (entryId) {
       Entry.findByIdAndUpdate(entryId, {$set: {game: req.body.entry, genre: req.body.genre}}).then(function(){
         console.log('working');
